@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DriverController;
 use App\Http\Controllers\OrderController;
+use App\Http\Controllers\UserController;
 
 // 1. Route to update a driver's active/inactive status
 Route::patch('/drivers/{id}/status', [DriverController::class, 'updateStatus']);
@@ -12,3 +13,5 @@ Route::post('/orders', [OrderController::class, 'store']);
 
 // 3. Route to update an order's progress status
 Route::patch('/orders/{id}/status', [OrderController::class, 'updateStatus']);
+
+Route::get('/users', [UserController::class, 'getusers']);
